@@ -3,21 +3,20 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "00fc2ebfae8f9f92f512842f0925dace",
-"index.html": "c06d9e75754c58b3242696dee7d66ebb",
-"/": "c06d9e75754c58b3242696dee7d66ebb",
-"main.dart.js": "551cb63bb4c84715f282ecf98884d97f",
-"404.html": "0a27a4163254fc8fce870c8cc3a3f94f",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+  "version.json": "cf159b1a378e9321bd9f727160aadf15",
+"index.html": "2aa703d2a5a29b579c38ebee980416a2",
+"/": "2aa703d2a5a29b579c38ebee980416a2",
+"main.dart.js": "f3a63f0213917316583673d7613060aa",
+"favicon2.png": "64351ca2d09e6b9bc36b8137322448e7",
+"favicon.png": "3f177f4bdd09c09e6963a0a3f3d06ed3",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"manifest.json": "351d1567a5f864ca0217782fcc4ff380",
-"assets/AssetManifest.json": "da1fa5832735714b0e8e6cb0ccb19cea",
-"assets/NOTICES": "df35cf2758ec167c89aa6e8f7954cdd5",
+"manifest.json": "3c853587b935fc74e930a8d633a92cf5",
+"assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
+"assets/NOTICES": "dc9a05e457e583ad4345501863b800fe",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/assets/config.json": "202879280943b822e9c0cb6f6411a698"
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
+"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -161,7 +160,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
